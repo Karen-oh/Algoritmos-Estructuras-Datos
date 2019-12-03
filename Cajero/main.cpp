@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 int menu();
 typedef int tMonto[20];
@@ -31,6 +32,7 @@ case 1:
     for(int i=0;i<cont;i++){
         cout << num[i] <<endl;
     }
+
 
     break;
 case 2:
@@ -74,9 +76,11 @@ cout << "3.-MOSTRAR LAS SUMA DE LOS NUMERO IMPARES Y PARES" <<endl;
 cout << "4.-SALIR";
 cout << "SELECCIONE UNA OPCION...";
 cin >>opcion;
+system("cls");
 while(opcion >4){
    cout << "SELECCIONE UNA OPCION VALIDA..."<<endl;
    cin >> opcion;
 }
+
 return opcion;
 }
