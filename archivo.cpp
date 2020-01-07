@@ -37,16 +37,19 @@ void abrir(){
 	string Narchivo;
 	cout << "Ingrese el nombre del archivo: ";
 	getline(cin, Narchivo);
+	cin.ignore();
 	ofstream archivoP;
-	
-	archivoP.open(Narchivo.c_str(), ios::out);cin.ignore();
+
+	archivoP.open(Narchivo.c_str(), ios::out);
 	do
 	{
+		
 		cout << "\t Ingrese su nombre: ";
 		getline(cin, nombre, '\n');
-		
+		cin.ignore();
 		cout << "\t Ingrese su apellido: ";
 		getline(cin, apellido, '\n');
+		cin.ignore();
 		cout << "\t Ingrese su edad: ";
 		cin >> edad;
 		archivoP << nombre << " " << apellido << " " << edad << "\n";
