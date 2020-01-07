@@ -10,15 +10,23 @@ int main()
 	int  opcion; 
 	cout << "1.- Abrir archivo" << endl;
 	cout << "2.-Leer el archivo" << endl;
+	cout <<"3.salir"<<endl;
 	cout << "Escoga una opcion: ";
 	cin >> opcion;
+	while (opcion!=3){
+	
 	if(opcion==1){
-	void abrir();	
+	abrir();	
 	}
 	if(opcion==2){
-		void leer();
+		 leer();
 	}	
-	
+	cout << "1.- Abrir archivo" << endl;
+	cout << "2.-Leer el archivo" << endl;
+	cout <<"3.salir"<<endl;
+	cout << "Escoga una opcion: ";
+	cin >> opcion;
+	}
 	return 0;
 }
 void abrir(){
@@ -30,12 +38,13 @@ void abrir(){
 	cout << "Ingrese el nombre del archivo: ";
 	getline(cin, Narchivo);
 	ofstream archivoP;
-	cout << "l";
-	archivoP.open(Narchivo.c_str(), ios::out);
+	
+	archivoP.open(Narchivo.c_str(), ios::out);cin.ignore();
 	do
 	{
 		cout << "\t Ingrese su nombre: ";
 		getline(cin, nombre, '\n');
+		
 		cout << "\t Ingrese su apellido: ";
 		getline(cin, apellido, '\n');
 		cout << "\t Ingrese su edad: ";
